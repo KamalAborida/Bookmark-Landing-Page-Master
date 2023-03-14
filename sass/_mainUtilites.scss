@@ -41,6 +41,11 @@
     border: 2px solid $Soft-Red;
     color: $Soft-Red;
   }
+
+  &--transparent{
+    background-color: unset;
+    border: 2px solid white;
+  }
 }
 
 .title{
@@ -63,24 +68,21 @@
 }
 
 .illustration{
-  width: 800px;
   background-color: $Soft-Blue;
-  height: 300px;
-  position: absolute;
-  top: 40%;
+  width: 300px;
+  height: 200px;
+  top: 25%;
   z-index: -1;
-
-  overflow: hidden;
-  
+  position: absolute;
 
   &--right{
     border-radius: 100px 0 0 100px;
-    right: -300px;
+    right: 0;
   }
 
   &--left{
     border-radius: 0 100px 100px 0;
-    left: -300px;
+    left: 0;
   }
 }
 
@@ -106,8 +108,27 @@ input:active, input:focus, input:target{
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
   .answer{
     text-align: left;
+  }
+
+  .illustration{
+    background-color: $Soft-Blue;
+    width: 500px;
+    height: 300px;
+    top: 40%;
+    z-index: -1;
+    position: absolute;
+  
+    &--right{
+      border-radius: 100px 0 0 100px;
+      right: -300px;
+    }
+  
+    &--left{
+      border-radius: 0 100px 100px 0;
+      left: -250px;
+    }
   }
 }

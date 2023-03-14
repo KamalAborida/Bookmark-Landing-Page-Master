@@ -4,6 +4,8 @@ const easySharing = document.getElementById("Easy-Sharing")
 const featureTitle = document.getElementById("featureTitle")
 const featureParagraph = document.getElementById("featureP")
 const featureImg = document.getElementById("featureImg")
+const hamMenu = document.getElementById("hamMenu")
+const closeBTn = document.getElementById("close")
 
 const contactBtn = document.getElementById("contactBtn")
 const email = document.getElementById("email")
@@ -91,10 +93,24 @@ const sendEmail = e => {
   }
 }
 
+const showNavMob = () => {
+  let nav = document.getElementById("burgerMenuContainer")
+  nav.classList.add("visible")
+  document.body.style.overflow = "hidden"
+}
+
+const closeNavMob = () => {
+  let nav = document.getElementById("burgerMenuContainer")
+  nav.classList.remove("visible")
+  document.body.style.overflow = "unset"
+}
+
 speedySearching.addEventListener("click", featureHandler.bind(this, "speedy-searching"))
 simpleBookmarking.addEventListener("click", featureHandler.bind(this, "simple-bookmarking"))
 easySharing.addEventListener("click", featureHandler.bind(this, "easy-sharing"))
 contactBtn.addEventListener("click", sendEmail)
+hamMenu.addEventListener("click", showNavMob)
+closeBTn.addEventListener("click", closeNavMob)
 questions.forEach(function(e, index) {
   e.addEventListener("click", showAnswer.bind(this, index))
 })

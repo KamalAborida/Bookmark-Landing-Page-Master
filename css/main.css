@@ -23,6 +23,46 @@ img {
   margin: 20px auto;
 }
 
+.burgerMenuContainer {
+  background-color: rgba(58, 47, 95, 0.97);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  color: white;
+  display: none;
+}
+.burgerMenuContainer__header {
+  display: flex;
+  width: 70%;
+  margin: 30px auto 50px auto;
+  justify-content: space-between;
+  color: white;
+}
+.burgerMenuContainer__navList {
+  width: 70%;
+  margin: 20px auto 50px auto;
+  list-style: none;
+  text-align: center;
+}
+.burgerMenuContainer__navList li {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 1em;
+}
+.burgerMenuContainer button {
+  width: 100%;
+  margin: 20px 0 0 0;
+  color: white;
+}
+.burgerMenuContainer__socialM {
+  width: 20%;
+  margin: 200px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -93,6 +133,10 @@ nav {
   border: 2px solid hsl(0, 94%, 66%);
   color: hsl(0, 94%, 66%);
 }
+.btn--transparent {
+  background-color: unset;
+  border: 2px solid white;
+}
 
 .title {
   color: hsl(229, 31%, 21%);
@@ -114,21 +158,20 @@ nav {
 }
 
 .illustration {
-  width: 800px;
   background-color: hsl(231, 69%, 60%);
-  height: 300px;
-  position: absolute;
-  top: 40%;
+  width: 300px;
+  height: 200px;
+  top: 25%;
   z-index: -1;
-  overflow: hidden;
+  position: absolute;
 }
 .illustration--right {
   border-radius: 100px 0 0 100px;
-  right: -300px;
+  right: 0;
 }
 .illustration--left {
   border-radius: 0 100px 100px 0;
-  left: -300px;
+  left: 0;
 }
 
 .answer {
@@ -152,24 +195,52 @@ input:active, input:focus, input:target {
   outline: none;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
   .answer {
     text-align: left;
+  }
+  .illustration {
+    background-color: hsl(231, 69%, 60%);
+    width: 500px;
+    height: 300px;
+    top: 40%;
+    z-index: -1;
+    position: absolute;
+  }
+  .illustration--right {
+    border-radius: 100px 0 0 100px;
+    right: -300px;
+  }
+  .illustration--left {
+    border-radius: 0 100px 100px 0;
+    left: -250px;
   }
 }
 .main {
   margin: 50px auto 100px auto;
-  width: 85%;
+  width: 100%;
 }
 .main__btnsContainer {
   display: flex;
   justify-content: space-evenly;
   margin-top: 25px;
+  margin: 10px auto;
+}
+.main__divLeft {
+  width: 85%;
+  margin: 0 auto;
 }
 
 .features {
   margin: 50px auto 100px auto;
+  width: 100%;
+}
+.features__imgContainer img {
+  max-width: 85%;
+}
+.features__divDownDown {
   width: 85%;
+  margin: 0 auto;
 }
 .features__featureSelector {
   margin: 40px 0;
@@ -333,7 +404,7 @@ input:active, input:focus, input:target {
 }
 
 .activeFeature {
-  border-bottom: 3px solid red;
+  border-bottom: 0;
 }
 
 .activeFeature:hover {
@@ -341,19 +412,14 @@ input:active, input:focus, input:target {
   color: black;
 }
 
-.visible {
-  display: block;
-}
-
-.invisible {
-  display: none;
-}
-
 .errorInpt {
   border: 2px solid hsl(0, 94%, 66%);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
   .main {
     display: flex;
     align-items: center;
@@ -527,4 +593,11 @@ input:active, input:focus, input:target {
   .contactUs__form {
     width: 40%;
   }
+}
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
 }
