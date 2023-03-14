@@ -11,6 +11,7 @@ html {
 
 body {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 img {
@@ -109,6 +110,25 @@ nav {
 
 .imgContainer {
   margin: 40px 0;
+  position: relative;
+}
+
+.illustration {
+  width: 800px;
+  background-color: hsl(231, 69%, 60%);
+  height: 300px;
+  position: absolute;
+  top: 40%;
+  z-index: -1;
+  overflow: hidden;
+}
+.illustration--right {
+  border-radius: 100px 0 0 100px;
+  right: -300px;
+}
+.illustration--left {
+  border-radius: 0 100px 100px 0;
+  left: -300px;
 }
 
 .answer {

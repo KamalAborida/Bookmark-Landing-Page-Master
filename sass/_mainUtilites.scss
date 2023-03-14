@@ -59,6 +59,29 @@
 
 .imgContainer{
   margin: 40px 0;
+  position: relative;
+}
+
+.illustration{
+  width: 800px;
+  background-color: $Soft-Blue;
+  height: 300px;
+  position: absolute;
+  top: 40%;
+  z-index: -1;
+
+  overflow: hidden;
+  
+
+  &--right{
+    border-radius: 100px 0 0 100px;
+    right: -300px;
+  }
+
+  &--left{
+    border-radius: 0 100px 100px 0;
+    left: -300px;
+  }
 }
 
 .answer{
