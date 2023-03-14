@@ -1,0 +1,90 @@
+.btn{
+  border-radius: 5px;
+  padding: 1em;
+  font-size: .8rem;
+  border: 0;
+  box-shadow: 1px 5px 10px 0 rgba(0, 0, 0, 0.268);
+  margin: 5px;
+  font-weight: bold;
+
+  &--purble{
+    background-color: $Soft-Blue;
+    color: white;
+  }
+
+  &--purble:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid $Soft-Blue;
+    color: $Soft-Blue;
+  }
+  
+  &--white{
+    background-color: gainsboro;
+    color: rgb(125, 125, 125);
+  }
+
+  &--white:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid rgb(125, 125, 125);
+  }
+
+  &--red{
+    background-color: $Soft-Red;
+    color: rgb(255, 255, 255);
+  }
+
+  &--red:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid $Soft-Red;
+    color: $Soft-Red;
+  }
+}
+
+.title{
+  color: $Very-Dark-Blue;
+  margin: 20px 0;
+}
+
+.paragraph{
+  color: $Grayish-Blue;
+  margin: 20px 0;
+}
+
+.section{
+  text-align: center;
+}
+
+.imgContainer{
+  margin: 40px 0;
+}
+
+.answer{
+  color: gray;
+  margin: 25px 0 15px 0;
+  display: none;
+}
+
+.sociLink:hover{
+  cursor: pointer;
+  filter:invert(61%) sepia(37%) saturate(5653%) hue-rotate(325deg) brightness(99%) contrast(98%);;
+}
+
+li:hover, .feature:hover{
+  cursor: pointer;
+  color: $Soft-Red;
+}
+
+input:active, input:focus, input:target{
+  border: 0;
+  outline: none;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .answer{
+    text-align: left;
+  }
+}

@@ -1,0 +1,449 @@
+@import './root';
+@import './nav';
+@import './mainUtilites';
+
+$Soft-Blue: hsl(231, 69%, 60%);
+$Soft-Red: hsl(0, 94%, 66%);
+$Grayish-Blue: hsl(229, 8%, 60%);
+$Very-Dark-Blue: hsl(229, 31%, 21%);
+
+
+.main{
+  margin: 50px auto 100px auto;
+  width: 85%;
+
+  &__btnsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+  }
+}
+
+.features{
+  margin: 50px auto 100px auto;
+  width: 85%;
+
+  &__featureSelector{
+    margin: 40px 0;
+
+    &__featureContainer{
+      border-top: 1px solid grey;
+      margin: 5px 0;
+      padding: 1em;
+    }
+
+    &__featureContainer:hover{
+      cursor: pointer;
+      color: $Soft-Red;
+    }
+  }
+}
+
+
+.card{
+  margin: 70px auto;
+  box-shadow: 0 10px 25px 0 rgba(118, 81, 212, 0.092);
+  border-radius: 15px;
+  padding: 2em 0;
+  width: 85%;
+
+  hr{
+    border: 0;
+
+    &:after {
+      content:".......................................................................";
+      letter-spacing: 20px; /* Use letter-spacing to increase space between dots*/
+      color: $Grayish-Blue;
+      font-size: 2rem;
+    }
+  }
+
+  &__btn{
+    margin: 20px 0 0 0;
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+.faq{
+  margin: 100px auto;
+  width: 85%;
+  
+  &__btn{
+    width:150px;
+    font-size: 1rem;
+    margin: 30px 0 60px 0;
+  }
+
+  &__questions{
+    margin: 40px 0;
+
+    &__q{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 1em;
+      text-align: left;
+      border-bottom: 1px solid grey;
+    }
+
+    &__q:hover{
+      color: $Soft-Red;
+      cursor: pointer;
+    }
+  }
+}
+
+.downloads{
+  width: 85%;
+  margin: 10px auto;
+}
+
+.contactUs{
+  background-color: $Soft-Blue;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 4em 1.5em 2em 1.5em;
+
+  &__p{
+    margin: 20px auto;
+    font-size: .8rem;
+    letter-spacing: .3em;
+  }
+
+  &__h1{
+    margin: 20px auto 40px auto;
+    font-size: 1.2rem;
+    letter-spacing: .1em;
+    font-weight: 500;
+  }
+
+  &__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px auto;
+
+    &__inptDiv{
+      width: 100%;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    button{
+      width: 100%;
+      margin: 20px auto;
+      padding:1.5em;
+    }
+
+    input{
+      width: 100%;
+      padding:1em;
+      border-radius: 5px;
+      border: 0;
+      font-size: 1rem;
+    }
+  }
+}
+
+.footer{
+  background-color: $Very-Dark-Blue;
+  text-align: center;
+  padding: 2em;
+
+  &__divTop__logo{
+    margin-bottom: 30px;
+  }
+
+  &__divTop__navList{
+    list-style: none;
+    color: white;
+    font-size: .9rem;
+
+    li{
+      margin: 20px 0;
+    }
+  }
+
+  &__socialM{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    margin: 40px auto;
+  }
+}
+
+.error{
+  border: 1px solid $Soft-Red;
+  border-radius: 5px;
+}
+
+.error::after{
+  content: "Woops, make sure it's an email";
+  background-color: $Soft-Red;
+  position: absolute;
+  display: block;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  text-align: left;
+  font-size: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.error::before{
+  content: " ";
+  background: url("../images/icon-error.svg");
+  position: absolute;
+  padding: 10px;
+  border-radius: 100%;
+  right: 10px;
+  top: 30%;
+}
+
+.activeFeature{
+  border-bottom: 3px solid red;
+}
+
+.activeFeature:hover{
+  cursor: default;
+  color: black;
+}
+
+.visible{
+  display: block;
+}
+
+.invisible{
+  display: none;
+}
+
+.errorInpt{
+  border: 2px solid $Soft-Red;
+}
+
+
+
+@media screen and (min-width:1000px) {
+  .main{
+    display: flex;
+    align-items: center;
+    width: 80%;
+
+    &__imgContainer{
+      order: 2;
+      width: 50%;
+    }
+
+    &__divLeft{
+      width: 50%;
+    }
+
+    &__title{
+      text-align: left;
+      font-size: 2.3rem;
+      font-weight: 500;
+    }
+
+    &__p{
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.5em;
+    }
+
+    &__btnsContainer{
+      width: 80%;
+      justify-content: space-between;
+    }
+  }
+
+  .features{
+    &__divTop{
+      width: 45%;
+      margin: 0 auto;
+    }
+
+    &__title{
+      margin: 10px;
+      font-weight: 500;
+    }
+
+    &__divDown{
+      display: flex;
+      justify-content: space-between;
+      margin: 10px auto;
+      width: 95%;
+      align-items: center;
+    }
+
+    &__divDownDown{
+      text-align: left;
+      width: 40%;
+
+      &__title{
+        font-weight: 500;
+      }
+
+      &__paragraph{
+        line-height: 1.5em;
+      }
+    }
+
+    &__imgContainer{
+      width: 50%;
+    }
+
+    &__featureSelector{
+      margin: 40px auto;
+      display: flex;
+      justify-content:center;
+  
+      &__featureContainer{
+        border-top: 0;
+        border-bottom: 1px solid grey;
+        padding: 1.5em 3em;
+      }
+    }
+  }
+
+  .downloads{
+    &__divTop{
+      width: 50%;
+      margin: 5px auto;
+    }
+
+    &__cardsDiv{
+      display: flex;
+      width: 80%;
+      margin: 10px auto;
+    }
+
+    @for $i from 1 through 3 {
+      &__card:nth-of-type(#{$i}) {
+        width: 30%;
+        position: relative;
+        top: (15px*$i);
+      }
+    }
+  }
+
+  .faq{
+    width: 40%;
+  }
+
+  .contactUs{
+    &__h1{
+      font-size: 1.5rem;
+      width: 40%;
+    }
+
+    &__form{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+
+      &__inptDiv{
+        width: 70%;
+        margin-bottom: 0;
+      }
+
+      button{
+        width: 25%;
+        margin: 0;
+        padding:1em;
+      }
+  
+      input{
+        margin: 0;
+        width: 100%;
+        padding:1.2em;
+        font-size: .7rem;
+      }
+    }
+  }
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    li{
+      margin: 0;
+    }
+
+    &__divTop{
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 10px auto;
+
+      &__logo{
+        width: 25%;
+        margin: 0;
+      }
+
+      &__navList{
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        list-style: none;
+        color: white;
+      }
+    }
+
+    &__socialM{
+      width: 8%;
+    }
+  }
+
+  .activeFeature{
+    border-bottom: 2px solid red;
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+  .main{
+    &__imgContainer{
+      width: 60%;
+    }
+
+    &__divLeft{
+      width: 40%;
+    }
+
+    &__btnsContainer{
+      width: 70%;
+    }
+  }
+
+
+  .downloads{
+    &__cardsDiv{
+      width: 90%;
+    }
+  }
+
+  .faq{
+    width: 40%;
+  }
+
+  .contactUs{
+    &__h1{
+      font-size: 1.5rem;
+      width: 40%;
+    }
+
+    &__form{
+      width: 40%;
+    }
+  }
+}
+
